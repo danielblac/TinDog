@@ -1,0 +1,205 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    max-width: 550px;
+    margin: 0 auto;
+    border: 5px solid black;
+    border-radius: 15px;
+}
+
+.header {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img {
+    height: 2em;
+    margin: 1em;
+}
+
+.paw {
+    height: 2.5em;
+    width: 5.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(270deg, #FA695A 0%, #F83375 100%);
+    border-radius: 1.875em;
+}
+
+.paw img {
+    padding: 0.3em;
+}
+
+main {
+    width: 100%;
+    height: 90%;
+}
+
+.welcome {
+    display: flex;
+}
+
+.finished-scroll {
+    display: none;
+}
+
+.welcome, .finished-scroll {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 0.7em;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome img,
+.finished-scroll img {
+    height: 60%;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.welcome p,
+.finished-scroll p {
+    max-width: 20em;
+    margin-top: 0.7em;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.welcome button, 
+.finished-scroll button {
+    font-weight: bold;
+    font-size: 2rem;
+    background: linear-gradient(270deg, #FA695A 0%, #F83375 100%);
+    margin-top: 0.6em;
+    padding: 0.5em 1em;
+    border-radius: 1.875em;
+    cursor: pointer;
+}
+
+.main-section {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.image-container {
+    width: 97%;
+    height: 80%;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1.5rem;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) -11.44%, rgba(0, 0, 0, 0) 39.97%);
+    background-size: cover;
+    border-radius: 1em;
+    position: relative;
+}
+
+.image-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+}
+
+.image-container img {
+    border-radius: 1em;
+}
+
+.image-text {
+    position: absolute;
+    bottom: 0.7em;
+    left: 0.6em;
+}
+
+.nope-image, .like-image {
+    position: absolute;
+    rotate: -30deg;
+    top: -100em;
+    left: 0.5em;
+    display: none;
+    animation: showbadge 0.2s ease-in-out 0.4s forwards;
+}
+
+@keyframes showbadge {
+    0% {
+        top: -1.25em;
+        transform: scaleY(0);
+    }
+
+    80% {
+        top: 1.875em;
+        transform: scaleY(1.2);
+    }
+
+    100% {
+        top: 1em;
+        transform: scaleY(1);
+    }
+}
+
+.text-head {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f8f8f8;
+}
+
+.shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.icons {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.75em;
+}
+
+.nope-icon, .like-icon {
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.nope-icon:hover, 
+.nope-icon:focus {
+    background-color: #FFE7EF;
+}
+
+.like-icon:hover,
+.like-icon:focus {
+    background-color: #DBFFF4;
+}
+
+.nope-icon img, .like-icon img {
+    height: 2.5em;
+    display: block;
+}
+
+.nope-image img, .like-image img {
+    width: 65%;
+}
